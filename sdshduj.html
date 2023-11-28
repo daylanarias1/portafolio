@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script src="./public/js/fontAwesome.js"></script>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('Inter Variable/Inter.ttf') format('truetype');
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url("baccc.png");
+            background-size: cover;
+            /* Ajusta la imagen para cubrir todo el fondo */
+            background-repeat: no-repeat;
+            /* Evita la repetición de la imagen */
+            background-attachment: fixed;
+            /* Fija la imagen en su posición para que no se desplace con el contenido */
+            width: 100%;
+            height: 100%;
+            color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            backdrop-filter: saturate(280%) blur(2vw);
+        }
+
+        main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+
+        section {
+            border-radius: 30px;
+            width: 95%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.210);
+            backdrop-filter: saturate(280%) blur(5vw);
+            padding: 5rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 48px;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.300);
+            backdrop-filter: saturate(280%) blur(5vw);
+            color: black;
+        }
+
+        .logo {
+            font-size: 25px;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            display: inline-block;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 12px;
+            margin-left: 35px;
+        }
+
+nav a {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 35px;
+    border-bottom: 2px solid transparent; /* Inicialmente transparente */
+    transition: border-bottom 0.3 ease; /* Agregamos transición para suavizar el cambio */
+}
+
+nav a:hover {
+    border-bottom: 2px solid #10E956; /* Color verde cuando está en hover */
+
+
+
+}
+/* Efecto al hacer clic (active) */
+nav a:active {
+    transform: translateY(2px); /* Mueve el enlace hacia abajo al hacer clic */
+}
+
+        header .btn-secundary {
+            margin-left: 1rem;
+            padding: 5px 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo"><img src="./logo-d-removebg-preview.svg" width="35px" alt=""></a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <button href="#" class="btn-secundary">Resume</button>
+        </nav>
+    </header>
+
+
+    <main>
+        <style>
+            .home-content h3 {
+                font-size: 32px;
+                font-weight: 700;
+            }
+
+            .home-content h3 span {
+                color: #0ef;
+            }
+
+            .home-content h1 {
+                font-size: 80px;
+                font-weight: 900;
+                margin: -3px 0;
+                color: inherit;
+                text-rendering: optimizeLegibility;
+                line-height: 1.1;
+            }
+
+            .home-content p {
+                font-size: 20px;
+                text-align: justify;
+            }
+
+            .home-sci a {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                background: transparent;
+                border: 2px solid #10E956;
+                border-radius: 50%;
+                font-size: 20px;
+                color: #10E956;
+                text-decoration: none;
+                margin: 30px 15px 30px 0;
+            }
+
+            .home-sci a svg {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .home-sci a:hover {
+                background: #10E956;
+                color: #081b29;
+            }
+
+            .home-sci a:active {
+    transform: scale(0.9); /* Cambiamos la escala al estar presionado */
+}
+
+            .btn-secundary,
+.btn-primary {
+    border-radius: 5px;
+    padding: 15px 25px;
+    margin: 5px;
+    font-size: 1.2rem;
+    font-weight: 540;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-secundary {
+    border: solid 2px #10E956;
+    background: transparent;
+    color: white;
+}
+
+.btn-primary {
+    border: solid 1px #10E956;
+    background: #10E956;
+    color: white;
+}
+
+.btn-secundary:hover,
+.btn-primary:hover {
+    background: #10E956;
+    color: #081b29;
+}
+
+.btn-secundary:active,
+.btn-primary:active {
+     transform: scale(0.9); /* Cambiamos la escala al estar presionado */
+}
+
+            .home {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                flex-wrap: wrap-reverse;
+                gap: 3rem;
+                padding: 3rem;
+            }
+
+            .home-content h4,
+            h3 {
+                color: #10E956;
+            }
+
+            .text::before {
+                content: '\25CF';
+                color: #10E956;
+                margin-right: 5px;
+            }
+
+            .home-content {
+                max-width: 600px;
+                text-align: left;
+            }
+
+            .image-container {
+                min-width: 10px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            @media (min-width: 700px) {
+                main section:first-of-type {
+                    height: 90vh;
+                }
+            }
+
+            .home h1 {
+                font-size: 78px;
+                line-height: 1.08349;
+                font-weight: 600;
+                letter-spacing: -.003em;
+            }
+
+            .image-container img {
+                width: 250px;
+                height: 230px;
+                filter: grayscale(50%);
+            }
+        </style>
+
+        <section class="home">
+            <div class="home-content">
+                <h4>Hello, I'am</h4>
+                <h1>Daylan Arias</h1>
+                <h3>Full stack developer</h3>
+                <span class="text"></span>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Voluptatum aliquid in commodi molestias.
+                    Quas
+                    dolores vitae veritatis enim, veniam
+                    doloribus, molestias, obcaecati tempora expedita sit
+                    repellendus.
+                    Nobis quae nostrum aspernatur.</p>
+                <div class="home-sci">
+                    <a href="#" style="--i:7"><i class="bi bi-facebook"></i></a>
+                    <a href="#" style="--i:8"><i class="bi bi-instagram"></i></a>
+                    <a href="#" style="--i:9"><i class="bi bi-whatsapp"></i></a>
+                    <a href="#" style="--i:10"><i class="bi bi-github"></i></a>
+                </div>
+                <button href="#" class="btn-primary">Resume</button>
+                <button href="#" class="btn-secundary">About me</button>
+            </div>
+            <div class="image-container">
+                <img src="img.jpg" alt="imagen" width="320px" height="320px">
+            </div>
+        </section>
+
+
+
+
+        <style>
+            .about-image {
+                display: flex;
+                align-items: center;
+                justify-content: center
+            }
+
+            .about-image img {
+                width: 320px;
+                height: 320px;
+                border-radius: 10px;
+                transform: scale(.95);
+                -webkit-filter: grayscale(1);
+                filter: grayscale(1);
+                transition: all 1s
+            }
+
+            .about-image:hover img {
+                transform: scale(1);
+                -webkit-filter: grayscale(0);
+                filter: grayscale(0)
+            }
+
+            .about {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 1.5rem;
+                margin: 0 2rem;
+            }
+
+            .about-img img {
+                padding-bottom: 20%;
+                max-width: 630px;
+                height: auto;
+                width: 100%;
+                border-radius: 8px;
+            }
+
+            .about-text h2 {
+                font-size: 60px;
+            }
+
+            .about-text {
+                max-width: 600px;
+            }
+
+            .about-text h2 span {
+                color: #10E956;
+            }
+
+            .about-text h4 {
+                font-size: 29px;
+                font-weight: 600;
+                color: #fff;
+                line-height: 1.7;
+                margin: 15px 0 30px;
+            }
+
+            .about-text p {
+                font-size: 20px;
+                color: aliceblue;
+                line-height: 1.4;
+                margin-bottom: 4rem;
+                text-align: justify;
+            }
+        </style>
+
+
+
+        <section class="about" id="about">
+            <div class="about-image">
+                <div class="image">
+                    <img alt="profile" src="img.jpg" />
+                </div>
+            </div>
+            <div class="about-text">
+                <h2>About <span>Me</span></h2>
+                <h4>Full Stack Developer!</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt eius, dicta eveniet commodi
+                    molestias
+                    cum eos voluptatum possimus tenetur optio porro ducimus nulla aliquam quia. Accusamus minima porro
+                    beatae harum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus earum voluptates
+                    itaque?
+                    Sint dolorem, aliquam nihil excepturi asperiores earum necessitatibus dolor, iure nemo, libero
+                    voluptatum explicabo a perferendis id? Repudiandae.</p>
+                <button href="#" class="btn-primary">Resume</button>
+                <button href="#" class="btn-secundary">Skills</button>
+            </div>
+        </section>
+
+
+
+
+
+        <style>
+            .education {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .educations {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .cards-education {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin: 1rem;
+
+            }
+
+            .card-education {
+                width: 300px;
+                height: 300px;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 0.8rem;
+                backdrop-filter: saturate(280%) blur(5vw);
+                background: none;
+                border: solid #10E956;
+            }
+
+            .education h2 {
+                font-size: 60px;
+            }
+
+            .education h2 span {
+                color: #10E956;
+            }
+
+            .education h6 {
+                color: #10E956;
+            }
+        </style>
+
+
+        <section class="education">
+            <h2>Education <span>Me</span></h2>
+            <div class="educations">
+
+                <div class="cards-education">
+                    <div class="card-education">
+                        <img class="logo-one" src="logo-one.png" alt="Logo - ONE" width="50%" height="30%">
+                        <p>Desarrolo web</p>
+                        <h6>2023 - En curso</h6>
+                    </div>
+                </div>
+
+                <div class="cards-education">
+                    <div class="card-education">
+                        <img class="logo-one" src="logo-ucr.png" alt="Logo - ONE" width="50%" height="30%">
+                        <p>Informatica empresarial</p>
+                        <h6>2021 - En curso</h6>
+                    </div>
+                </div>
+
+                <div class="cards-education">
+                    <div class="card-education">
+                        <img class="logo-one" src="itoo.png" alt="Logo - ONE" width="50%" height="30%">
+                        <p>FullStack</p>
+                        <h6>2021 - En curso</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+        <style>
+            .flex-wrapper {
+                display: flex;
+            }
+
+            .single-chart {
+                width: 250px;
+                justify-content: space-around;
+            }
+
+            .circular-chart {
+                display: block;
+                margin: 10px auto;
+                max-width: 80%;
+                max-height: 250px;
+            }
+
+
+            .circle-bg,
+            .circle {
+                fill: none;
+                stroke: rgba(255, 255, 255, 0.350);
+                backdrop-filter: saturate(280%) blur(5vw);
+                background: none;
+                stroke-width: 1;
+            }
+
+            .circle {
+                fill: none;
+                stroke-linecap: round;
+                animation: progress 1s ease-out forwards;
+            }
+
+            @keyframes progress {
+                0% {
+                    stroke-dasharray: 0 100;
+                }
+            }
+
+            .orange .circle {
+                stroke: #10E956;
+            }
+
+            .percentage {
+                fill: #666;
+                font-family: sans-serif;
+                font-size: 0.5em;
+                text-anchor: middle;
+            }
+        </style>
+
+
+
+
+
+
+
+
+
+        <style>
+            .sss {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .sss h2 {
+                font-size: 60px;
+            }
+
+            .sss h2 span {
+                color: #10E956;
+            }
+
+            .lin {
+                margin: 1rem;
+            }
+
+            .Skills {
+                margin: 1rem;
+                width: 90%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 5rem;
+            }
+
+            .Skills h2 {
+                font-size: 30px;
+                color: #10E956;
+            }
+
+            .Skills p {
+                font-size: 20px;
+                color: rgb(255, 255, 255);
+            }
+        </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="sss">
+            <h2><span>My</span> skills</h2>
+            <div class="lin">
+                <button id="webButton" class="btn-primary">Web</button>
+                <button id="programmingButton" class="btn-secundary">Programming</button>
+                <button id="toolsButton" class="btn-secundary">Tools</button>
+            </div>
+            <div class="Skills">
+            </div>
+        </section>
+
+        <script>
+            const webData = [
+                { name: "React", percentage: 56, image: "react.png" },
+                { name: "PHP", percentage: 23, image: "php.png" },
+                { name: "HTML", percentage: 99, image: "html.png" },
+                { name: "CSS", percentage: 66, image: "css.png" },
+                { name: "JS", percentage: 44, image: "js.png" }
+            ];
+
+            const programmingData = [
+                { name: "Java", percentage: 77, image: "java.webp" },
+                { name: "C#", percentage: 66, image: "cshart.png" },
+                { name: "C++", percentage: 55, image: "cpp.png" },
+                { name: "Python", percentage: 44, image: "python.png" }
+            ];
+
+            const toolsData = [
+                { name: "Git", percentage: 95, image: "git.png" },
+                { name: "Git Desktop", percentage: 95, image: "git-destop.png" },
+                { name: "ChatGPT", percentage: 55, image: "chat-gpt.jpg" },
+                { name: "Docker", percentage: 22, image: "docker.png" },
+                { name: "Kubernetes", percentage: 11, image: "kubernetes.png" }
+            ];
+
+            const SkillsContainer = document.querySelector('.Skills');
+
+            function generateSkills(data) {
+                SkillsContainer.innerHTML = '';
+
+                data.forEach((item) => {
+                    var div = document.createElement("div");
+                    div.className = "single-chart";
+
+                    div.innerHTML = `<svg viewBox="0 0 36 36" class="circular-chart orange">
+      <path class="circle-bg" d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.831a15.9155 15.9155 0 0 1 0 -31.831"/>
+      <path class="circle" stroke-dasharray="${item.percentage}, 100" d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.831a15.9155 15.9155 0 0 1 0 -31.831"/>
+      <text x="18" y="30" class="percentage">${item.percentage}%</text>
+
+      <!-- Agregamos la imagen y el nombre -->
+      <image href="${item.image}" x="10" y="5" width="16" height="16" />
+      <text x="18" y="23" class="percentage">${item.name}</text>
+    </svg>`;
+
+                    SkillsContainer.appendChild(div);
+                });
+            }
+
+            const webButton = document.getElementById('webButton');
+            const programmingButton = document.getElementById('programmingButton');
+            const toolsButton = document.getElementById('toolsButton');
+
+            function setActiveButton(activeButton) {
+                // Resetea las clases de todos los botones
+                webButton.classList.remove('btn-primary');
+                programmingButton.classList.remove('btn-primary');
+                toolsButton.classList.remove('btn-primary');
+
+
+                                webButton.classList.add('btn-secundary');
+                programmingButton.classList.add('btn-secundary');
+                toolsButton.classList.add('btn-secundary');
+
+                // Establece el botón activo como primario y los otros como secundarios
+                activeButton.classList.add('btn-primary');
+                [webButton, programmingButton, toolsButton].forEach((button) => {
+                    if (button !== activeButton) {
+                        button.classList.add('btn-secondary');
+                    }
+                });
+            }
+
+            webButton.addEventListener('click', () => {
+                setActiveButton(webButton);
+                generateSkills(webData);
+            });
+
+            programmingButton.addEventListener('click', () => {
+                setActiveButton(programmingButton);
+                generateSkills(programmingData);
+            });
+
+            toolsButton.addEventListener('click', () => {
+                setActiveButton(toolsButton);
+                generateSkills(toolsData);
+            });
+
+            generateSkills(webData);
+
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+        <style>
+            .Form {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                max-width: 700px;
+                gap: 0.5rem;
+                padding: 0.25rem;
+            }
+
+            .s {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row;
+                gap: 0.5rem;
+            }
+        </style>
+
+
+        <style>
+            .education {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .educations {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+            }
+
+            .cards-education {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin: 1rem;
+            }
+
+            .education h2 {
+                font-size: 60px;
+            }
+
+            .education h2 span {
+                color: #10E956;
+            }
+
+            .education h6 {
+                color: #10E956;
+            }
+        </style>
+
+
+        <section class="education">
+            <h2><span>My</span> projects</h2>
+            <style>
+                .containerr {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    max-width: 1100px;
+                    backdrop-filter: saturate(280%) blur(5vw);
+                    background: none;
+                    border: solid #10E956;
+                    border-radius: 10px;
+                    padding: 1rem;
+                    gap: 1rem;
+                }
+
+                img {
+                    max-width: 100%;
+                    border-radius: 10px;
+                    height: 40%;
+                }
+
+                p {
+                    text-align: justify;
+                    font-size: 0.7rem;
+                }
+
+                .social-buttons {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    width: 100%;
+                }
+
+                .text-white {
+                    color: white;
+                }
+
+                input[type="radio"] {
+                    width: 20px;
+                    height: 20px;
+                    padding: 0;
+                    position: relative;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    border-radius: 50%;
+                    outline: none;
+                    cursor: pointer;
+                    background-color: #fff;
+                }
+
+                input[type="radio"]::before {
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(1);
+                    background-color: #d70a6d;
+                    border-radius: 50%;
+                    opacity: 0;
+                    box-shadow: none;
+                }
+
+                input[type="radio"]:checked::before {
+                    opacity: 1;
+                }
+
+
+                input[type="radio"]:checked:focus {
+                    border: 4px solid #10E956;
+                }
+
+                input[type="radio"]:checked {
+                    width: 28px;
+                    height: 28px;
+                    border: 2px solid #10E956;
+                }
+
+                .ssss {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+                    gap: 1rem;
+                }
+
+                .ssss input[type="radio"]:hover::before {
+    opacity: 0.8;
+}
+
+.ssss input[type="radio"]:active::before {
+    opacity: 0.6;
+}
+
+.ssss input[type="radio"]:hover:checked::before {
+    opacity: 1;
+}
+
+.ssss input[type="radio"]:active:checked::before {
+    opacity: 0.8;
+}
+
+.ssss input[type="radio"]:hover:checked:focus {
+    border: 4px solid #081b29; /* Cambia el color de borde al hacer hover y estar seleccionado */
+}
+
+.ssss input[type="radio"]:active:checked {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #081b29; /* Cambia el color del borde al hacer clic y estar seleccionado */
+}
+
+
+
+                .containerr {
+                    position: relative;
+                }
+
+                .hidden {
+                    display: none;
+                }
+            </style>
+
+
+            <div class="containerr">
+                <img id="main-image" src="captura.PNG" alt="">
+                <h3 id="main-title">Encriptador</h3>
+                <p id="main-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, nesciunt
+                    praesentium ducimus in nostrum consequuntur aspernatur deserunt alias atque qui? Voluptatum fugiat
+                    minima
+                    enim iste tenetur voluptates, officiis temporibus qui!</p>
+                <div class="technologies">
+                    <i class="bi bi-filetype-js"></i>
+                </div>
+                <div class="social-buttons">
+                    <a href="#" id="website-link"><i class="text-white bi bi-globe"></i></a>
+                    <a href="#" id="repository-link"><i class="text-white bi bi-github"></i></a>
+                </div>
+            </div>
+
+            <div class="ssss" style="margin: 1rem;">
+                <input type="radio" name="option" id="option1" checked>
+                <input type="radio" name="option" id="option2">
+                <input type="radio" name="option" id="option3">
+                <input type="radio" name="option" id="option4">
+            </div>
+
+
+            <script>
+                const radioButtons = document.querySelectorAll('input[type="radio"]');
+                const mainImage = document.getElementById('main-image');
+                const mainTitle = document.getElementById('main-title');
+                const mainDescription = document.getElementById('main-description');
+                const websiteLink = document.getElementById('website-link');
+                const repositoryLink = document.getElementById('repository-link');
+                const technologiesContainer = document.querySelector('.technologies');
+
+                const projects = [
+                    {
+                        imageSrc: 'captura.PNG',
+                        title: 'Encriptador',
+                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, nesciunt praesentium ducimus in nostrum consequuntur aspernatur deserunt alias atque qui? Voluptatum fugiat minima enim iste tenetur voluptates, officiis temporibus qui!',
+                        website: 'https://example.com/proyecto-encriptador',
+                        repository: 'https://github.com/tu-usuario/proyecto-encriptador',
+                        technologies: ['bi-filetype-html', 'bi-filetype-html', 'bi-filetype-html']
+                    },
+                    {
+                        imageSrc: 'entomo.PNG',
+                        title: 'Entomo',
+                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, nesciunt praesentium ducimus in nostrum consequuntur aspernatur deserunt alias atque qui? Voluptatum fugiat minima enim iste tenetur voluptates, officiis temporibus qui!',
+                        website: 'https://example.com/proyecto-entomo',
+                        repository: 'https://github.com/tu-usuario/proyecto-entomo',
+                        technologies: ['bi-filetype-js', 'bi-filetype-html']
+                    },
+                    // Agrega más objetos de proyecto según el número de proyectos "n"
+                ];
+
+                radioButtons.forEach((radioButton, index) => {
+                    radioButton.addEventListener('change', function () {
+                        const project = projects[index];
+
+                        mainImage.src = project.imageSrc;
+                        mainTitle.textContent = project.title;
+                        mainDescription.textContent = project.description;
+                        websiteLink.href = project.website;
+                        repositoryLink.href = project.repository;
+
+                        technologiesContainer.innerHTML = '';
+
+                        const fragment = document.createDocumentFragment();
+
+                        project.technologies.forEach(technology => {
+                            const iconElement = document.createElement('i');
+                            iconElement.className = `text-white bi ${technology}`;
+                            fragment.appendChild(iconElement);
+                        });
+
+                        technologiesContainer.appendChild(fragment);
+                    });
+                });
+
+
+            </script>
+        </section>
+
+
+        <style>
+            input {
+                backdrop-filter: saturate(280%) blur(5vw);
+                background: none;
+                border: #10E956 solid 1px;
+                font-size: 14px;
+                line-height: 1.23536;
+                font-weight: 400;
+                letter-spacing: -.022em;
+                border-radius: 12px;
+                text-align: left;
+                outline: none;
+                color: white;
+            }
+
+            textarea {
+                backdrop-filter: saturate(280%) blur(5vw);
+                background: none;
+                border: #10E956 solid;
+                font-size: 17px;
+                line-height: 1.23536;
+                font-weight: 400;
+                letter-spacing: -.022em;
+                border-radius: 12px;
+                border-width: 1px;
+                border-style: solid;
+                text-align: left;
+                outline: none;
+                color: white;
+
+                padding: 1rem 0.3rem 0.3rem 0.5rem;
+            }
+
+            .skl {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .skl h2 {
+                font-size: 60px;
+            }
+
+            .skl h2 span {
+                color: #10E956;
+            }
+
+            form {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+            }
+
+            .s {
+                width: 100%;
+            }
+        </style>
+
+        <section class="skl">
+
+            <h2><span>Contact</span></h2>
+
+
+            <form action="" class="Form">
+
+                <style>
+                    .IN {
+                        position: relative;
+                        width: 100%;
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 100%;
+                        padding: 1rem 0.3rem 0.3rem 0.5rem;
+                    }
+
+
+                    input:not(:placeholder-shown)+label,
+                    input:focus+label {
+                        transform: scale(0.7) translateY(-0.6rem);
+                    }
+
+                    textarea:not(:placeholder-shown)+label,
+                    textarea:focus+label {
+                        transform: scale(0.7) translateY(-0.6rem);
+                    }
+
+                    label {
+                        position: absolute;
+                        top: 10px;
+                        left: 10PX;
+                        width: 100%;
+                        height: 100%;
+                        font-size: 17px;
+                        color: #b7b7b7;
+                        transition: 0.25s ease-in-out;
+                        transform-origin: top left;
+                        pointer-events: none;
+                    }
+
+                    textarea:focus,
+                    input:focus {
+                        outline: 1.5px solid #10E956;
+                    }
+                </style>
+
+                <div class="s">
+                    <div class="IN">
+                        <input type="text" name="" id="fullname" required placeholder=" ">
+                        <label for="fullname">Fullname</label>
+                    </div>
+
+                    <div class="IN">
+                        <input type="text" name="" id="email" required placeholder=" ">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+
+                <div class="IN">
+                    <input type="text" name="" id="" placeholder=" " placeholder=" ">
+                    <label for="">Subjet</label>
+                </div>
+                <div class="IN">
+                    <textarea name="" id="" cols="30" rows="10" placeholder=" " style="width: 100%;"></textarea>
+                    <label for="">Message</label>
+                </div>
+                <button href="#" class="btn-primary">Send</button>
+
+            </form>
+
+        </section>
+
+    </main>
+</body>
+
+</html>
