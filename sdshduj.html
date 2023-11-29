@@ -53,9 +53,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(255, 255, 255, 0.210);
+            background: rgba(0, 0, 0, 0.39);
             backdrop-filter: saturate(280%) blur(5vw);
             padding: 5rem;
+
+            /* background: rgba(255, 255, 255, 0.210); */
         }
 
         header {
@@ -69,7 +71,7 @@
             justify-content: space-between;
             align-items: center;
             z-index: 100;
-            background: rgba(255, 255, 255, 0.300);
+            background: rgba(0, 0, 0, 0.39);
             backdrop-filter: saturate(280%) blur(5vw);
             color: black;
         }
@@ -95,27 +97,32 @@
             margin-left: 35px;
         }
 
-nav a {
-    display: inline-block;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 12px;
-    margin-left: 35px;
-    border-bottom: 2px solid transparent; /* Inicialmente transparente */
-    transition: border-bottom 0.3 ease; /* Agregamos transición para suavizar el cambio */
-}
+        nav a {
+            display: inline-block;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 12px;
+            margin-left: 35px;
+            border-bottom: 2px solid transparent;
+            /* Inicialmente transparente */
+            transition: border-bottom 0.3 ease;
+            /* Agregamos transición para suavizar el cambio */
+        }
 
-nav a:hover {
-    border-bottom: 2px solid #10E956; /* Color verde cuando está en hover */
+        nav a:hover {
+            border-bottom: 2px solid #2997ff;
+            /* Color verde cuando está en hover */
 
 
 
-}
-/* Efecto al hacer clic (active) */
-nav a:active {
-    transform: translateY(2px); /* Mueve el enlace hacia abajo al hacer clic */
-}
+        }
+
+        /* Efecto al hacer clic (active) */
+        nav a:active {
+            transform: translateY(2px);
+            /* Mueve el enlace hacia abajo al hacer clic */
+        }
 
         header .btn-secundary {
             margin-left: 1rem;
@@ -171,10 +178,10 @@ nav a:active {
                 width: 40px;
                 height: 40px;
                 background: transparent;
-                border: 2px solid #10E956;
+                border: 2px solid #2997ff;
                 border-radius: 50%;
                 font-size: 20px;
-                color: #10E956;
+                color: #2997ff;
                 text-decoration: none;
                 margin: 30px 15px 30px 0;
             }
@@ -186,47 +193,51 @@ nav a:active {
             }
 
             .home-sci a:hover {
-                background: #10E956;
+                background: #2997ff;
                 color: #081b29;
             }
 
             .home-sci a:active {
-    transform: scale(0.9); /* Cambiamos la escala al estar presionado */
-}
+                transform: scale(0.9);
+                /* Cambiamos la escala al estar presionado */
+            }
 
             .btn-secundary,
-.btn-primary {
-    border-radius: 5px;
-    padding: 15px 25px;
-    margin: 5px;
-    font-size: 1.2rem;
-    font-weight: 540;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
+            .btn-primary {
+                border-radius: 5px;
+                padding: 15px 25px;
+                margin: 5px;
+                font-size: 1.2rem;
+                font-weight: 540;
+                cursor: pointer;
+                transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            }
 
-.btn-secundary {
-    border: solid 2px #10E956;
-    background: transparent;
-    color: white;
-}
+            .btn-secundary {
+                /* border: solid 2px #2997ff; */
+                
+                border: 2px solid #2997ff;
+                background: #191920;
+                color: white;
+            }
 
-.btn-primary {
-    border: solid 1px #10E956;
-    background: #10E956;
-    color: white;
-}
+            .btn-primary {
+                border: solid 1px #2997ff;
+                background: #2997ff;
+                color: white;
+            }
 
-.btn-secundary:hover,
-.btn-primary:hover {
-    background: #10E956;
-    color: #081b29;
-}
+            .btn-secundary:hover,
+            .btn-primary:hover {
+                background: #2997ff;
+                color: #081b29;
+            }
 
-.btn-secundary:active,
-.btn-primary:active {
-     transform: scale(0.9); /* Cambiamos la escala al estar presionado */
-}
+            .btn-secundary:active,
+            .btn-primary:active {
+                transform: scale(0.9);
+                /* Cambiamos la escala al estar presionado */
+            }
 
             .home {
                 display: flex;
@@ -240,12 +251,12 @@ nav a:active {
 
             .home-content h4,
             h3 {
-                color: #10E956;
+                color: #2997ff;
             }
 
             .text::before {
                 content: '\25CF';
-                color: #10E956;
+                color: #2997ff;
                 margin-right: 5px;
             }
 
@@ -303,7 +314,7 @@ nav a:active {
                 <button href="#" class="btn-secundary">About me</button>
             </div>
             <div class="image-container">
-                <img src="img.jpg" alt="imagen" width="320px" height="320px">
+                <img src="imgbb.jpg" alt="imagen" width="320px" height="320px">
             </div>
         </section>
 
@@ -360,7 +371,7 @@ nav a:active {
             }
 
             .about-text h2 span {
-                color: #10E956;
+                color: #2997ff;
             }
 
             .about-text h4 {
@@ -385,7 +396,7 @@ nav a:active {
         <section class="about" id="about">
             <div class="about-image">
                 <div class="image">
-                    <img alt="profile" src="img.jpg" />
+                    <img alt="profile" src="imgnn.jpg" />
                 </div>
             </div>
             <div class="about-text">
@@ -443,8 +454,8 @@ nav a:active {
                 flex-direction: column;
                 gap: 0.8rem;
                 backdrop-filter: saturate(280%) blur(5vw);
-                background: none;
-                border: solid #10E956;
+                background: #191920;
+                /* border: solid #2997ff; */
             }
 
             .education h2 {
@@ -452,11 +463,11 @@ nav a:active {
             }
 
             .education h2 span {
-                color: #10E956;
+                color: #2997ff;
             }
 
             .education h6 {
-                color: #10E956;
+                color: #2997ff;
             }
         </style>
 
@@ -467,7 +478,7 @@ nav a:active {
 
                 <div class="cards-education">
                     <div class="card-education">
-                        <img class="logo-one" src="logo-one.png" alt="Logo - ONE" width="50%" height="30%">
+                        <img class="logo-one" src="logo-one.png" alt="Logo - ONE" width="50%" height="20%">
                         <p>Desarrolo web</p>
                         <h6>2023 - En curso</h6>
                     </div>
@@ -523,14 +534,14 @@ nav a:active {
             .circle-bg,
             .circle {
                 fill: none;
-                stroke: rgba(255, 255, 255, 0.350);
+                stroke: #cbcbcb87;
                 backdrop-filter: saturate(280%) blur(5vw);
                 background: none;
-                stroke-width: 1;
+                stroke-width: 0.5;
             }
 
             .circle {
-                fill: none;
+                fill: #191920;
                 stroke-linecap: round;
                 animation: progress 1s ease-out forwards;
             }
@@ -542,7 +553,7 @@ nav a:active {
             }
 
             .orange .circle {
-                stroke: #10E956;
+                stroke: #2997ff;
             }
 
             .percentage {
@@ -574,7 +585,7 @@ nav a:active {
             }
 
             .sss h2 span {
-                color: #10E956;
+                color: #2997ff;
             }
 
             .lin {
@@ -593,7 +604,7 @@ nav a:active {
 
             .Skills h2 {
                 font-size: 30px;
-                color: #10E956;
+                color: #2997ff;
             }
 
             .Skills p {
@@ -660,7 +671,7 @@ nav a:active {
 
                     div.innerHTML = `<svg viewBox="0 0 36 36" class="circular-chart orange">
       <path class="circle-bg" d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.831a15.9155 15.9155 0 0 1 0 -31.831"/>
-      <path class="circle" stroke-dasharray="${item.percentage}, 100" d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.831a15.9155 15.9155 0 0 1 0 -31.831"/>
+      <path class="circle" stroke-width="2" stroke-dasharray="${item.percentage}, 100" d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.831a15.9155 15.9155 0 0 1 0 -31.831"/>
       <text x="18" y="30" class="percentage">${item.percentage}%</text>
 
       <!-- Agregamos la imagen y el nombre -->
@@ -683,7 +694,7 @@ nav a:active {
                 toolsButton.classList.remove('btn-primary');
 
 
-                                webButton.classList.add('btn-secundary');
+                webButton.classList.add('btn-secundary');
                 programmingButton.classList.add('btn-secundary');
                 toolsButton.classList.add('btn-secundary');
 
@@ -726,7 +737,7 @@ nav a:active {
 
 
         <style>
-            .Form {
+            .Contact-form {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -734,6 +745,7 @@ nav a:active {
                 max-width: 700px;
                 gap: 0.5rem;
                 padding: 0.25rem;
+                width: 90%;
             }
 
             .s {
@@ -775,11 +787,11 @@ nav a:active {
             }
 
             .education h2 span {
-                color: #10E956;
+                color: #2997ff;
             }
 
             .education h6 {
-                color: #10E956;
+                color: #2997ff;
             }
         </style>
 
@@ -793,9 +805,8 @@ nav a:active {
                     align-items: center;
                     justify-content: space-between;
                     max-width: 1100px;
+                    background: #191920;
                     backdrop-filter: saturate(280%) blur(5vw);
-                    background: none;
-                    border: solid #10E956;
                     border-radius: 10px;
                     padding: 1rem;
                     gap: 1rem;
@@ -857,13 +868,13 @@ nav a:active {
 
 
                 input[type="radio"]:checked:focus {
-                    border: 4px solid #10E956;
+                    border: 4px solid #2997ff;
                 }
 
                 input[type="radio"]:checked {
                     width: 28px;
                     height: 28px;
-                    border: 2px solid #10E956;
+                    border: 2px solid #2997ff;
                 }
 
                 .ssss {
@@ -875,32 +886,32 @@ nav a:active {
                 }
 
                 .ssss input[type="radio"]:hover::before {
-    opacity: 0.8;
-}
+                    opacity: 0.8;
+                }
 
-.ssss input[type="radio"]:active::before {
-    opacity: 0.6;
-}
+                .ssss input[type="radio"]:active::before {
+                    opacity: 0.6;
+                }
 
-.ssss input[type="radio"]:hover:checked::before {
-    opacity: 1;
-}
+                .ssss input[type="radio"]:hover:checked::before {
+                    opacity: 1;
+                }
 
-.ssss input[type="radio"]:active:checked::before {
-    opacity: 0.8;
-}
+                .ssss input[type="radio"]:active:checked::before {
+                    opacity: 0.8;
+                }
 
-.ssss input[type="radio"]:hover:checked:focus {
-    border: 4px solid #081b29; /* Cambia el color de borde al hacer hover y estar seleccionado */
-}
+                .ssss input[type="radio"]:hover:checked:focus {
+                    border: 4px solid #081b29;
+                    /* Cambia el color de borde al hacer hover y estar seleccionado */
+                }
 
-.ssss input[type="radio"]:active:checked {
-    width: 28px;
-    height: 28px;
-    border: 2px solid #081b29; /* Cambia el color del borde al hacer clic y estar seleccionado */
-}
-
-
+                .ssss input[type="radio"]:active:checked {
+                    width: 28px;
+                    height: 28px;
+                    border: 2px solid #081b29;
+                    /* Cambia el color del borde al hacer clic y estar seleccionado */
+                }
 
                 .containerr {
                     position: relative;
@@ -996,9 +1007,9 @@ nav a:active {
 
         <style>
             input {
+                background: #191920;
                 backdrop-filter: saturate(280%) blur(5vw);
-                background: none;
-                border: #10E956 solid 1px;
+                border: none;
                 font-size: 14px;
                 line-height: 1.23536;
                 font-weight: 400;
@@ -1011,58 +1022,56 @@ nav a:active {
 
             textarea {
                 backdrop-filter: saturate(280%) blur(5vw);
-                background: none;
-                border: #10E956 solid;
+                border: none;
                 font-size: 17px;
                 line-height: 1.23536;
                 font-weight: 400;
                 letter-spacing: -.022em;
                 border-radius: 12px;
-                border-width: 1px;
-                border-style: solid;
                 text-align: left;
                 outline: none;
                 color: white;
-
+                background: #191920;
+                backdrop-filter: saturate(280%) blur(5vw);
                 padding: 1rem 0.3rem 0.3rem 0.5rem;
             }
 
-            .skl {
+            .Contact {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
             }
 
-            .skl h2 {
+            .Contact h2 {
                 font-size: 60px;
             }
 
-            .skl h2 span {
-                color: #10E956;
+            .Contact h2 span {
+                color: #2997ff;
             }
 
-            form {
+            .Contact-container {
+                width: 100%;
+                gap: 0.5rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 90%;
-            }
-
-            .s {
-                width: 100%;
+                flex-direction: row;
+                flex-wrap: wrap;
+                
             }
         </style>
 
-        <section class="skl">
+        <section class="Contact">
 
             <h2><span>Contact</span></h2>
 
 
-            <form action="" class="Form">
+            <form action="" class="Contact-form">
 
                 <style>
-                    .IN {
+                    .Contact-input-label {
                         position: relative;
                         width: 100%;
                     }
@@ -1099,27 +1108,27 @@ nav a:active {
 
                     textarea:focus,
                     input:focus {
-                        outline: 1.5px solid #10E956;
+                        outline: 1.5px solid #2997ff;
                     }
                 </style>
 
-                <div class="s">
-                    <div class="IN">
+                <div class="Contact-container">
+                    <div class="Contact-input-label">
                         <input type="text" name="" id="fullname" required placeholder=" ">
                         <label for="fullname">Fullname</label>
                     </div>
 
-                    <div class="IN">
+                    <div class="Contact-input-label">
                         <input type="text" name="" id="email" required placeholder=" ">
                         <label for="email">Email</label>
                     </div>
                 </div>
 
-                <div class="IN">
+                <div class="Contact-input-label">
                     <input type="text" name="" id="" placeholder=" " placeholder=" ">
                     <label for="">Subjet</label>
                 </div>
-                <div class="IN">
+                <div class="Contact-input-label">
                     <textarea name="" id="" cols="30" rows="10" placeholder=" " style="width: 100%;"></textarea>
                     <label for="">Message</label>
                 </div>
