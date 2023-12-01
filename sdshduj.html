@@ -5,142 +5,117 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <script src="./public/js/fontAwesome.js"></script>
-    <style>
-        @font-face {
-            font-family: 'Inter';
-            src: url('Inter Variable/Inter.ttf') format('truetype');
-        }
 
-        * {
-            padding: 0;
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-image: url("baccc.png");
-            background-size: cover;
-            /* Ajusta la imagen para cubrir todo el fondo */
-            background-repeat: no-repeat;
-            /* Evita la repetición de la imagen */
-            background-attachment: fixed;
-            /* Fija la imagen en su posición para que no se desplace con el contenido */
-            width: 100%;
-            height: 100%;
-            color: rgb(255, 255, 255);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            backdrop-filter: saturate(280%) blur(2vw);
-        }
-
-        main {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 3rem;
-            margin: 4rem 0;
-        }
-
-        section {
-            border-radius: 30px;
-            width: 95%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0, 0, 0, 0.39);
-            backdrop-filter: saturate(280%) blur(5vw);
-            padding: 5rem;
-
-            /* background: rgba(255, 255, 255, 0.210); */
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 48px;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-            background: rgba(0, 0, 0, 0.39);
-            backdrop-filter: saturate(280%) blur(5vw);
-            color: black;
-        }
-
-        .logo {
-            font-size: 25px;
-            color: #fff;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-        }
-
-        nav a {
-            display: inline-block;
-            color: rgb(255, 255, 255);
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 12px;
-            margin-left: 35px;
-        }
-
-        nav a {
-            display: inline-block;
-            color: rgb(255, 255, 255);
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 12px;
-            margin-left: 35px;
-            border-bottom: 2px solid transparent;
-            /* Inicialmente transparente */
-            transition: border-bottom 0.3 ease;
-            /* Agregamos transición para suavizar el cambio */
-        }
-
-        nav a:hover {
-            border-bottom: 2px solid #2997ff;
-            /* Color verde cuando está en hover */
-
-
-
-        }
-
-        /* Efecto al hacer clic (active) */
-        nav a:active {
-            transform: translateY(2px);
-            /* Mueve el enlace hacia abajo al hacer clic */
-        }
-
-        header .btn-secundary {
-            margin-left: 1rem;
-            padding: 5px 15px;
-        }
-    </style>
 </head>
 
 <body>
 
+        <style>
+            @font-face {
+                font-family: 'Inter';
+                src: url('Inter Variable/Inter.ttf') format('truetype');
+            }
+        
+            * {
+                padding: 0;
+                margin: 0;
+                font-family: 'Inter', sans-serif;
+                box-sizing: border-box;
+            }
+        
+            body {
+                background: url("background.png") no-repeat fixed;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                backdrop-filter: saturate(280%) blur(1.5vw);
+                position: relative;
+            }
+        
+            main {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 3rem;
+                margin: 4rem 0;
+            }
+        
+            section {
+                border-radius: 30px;
+                width: 95%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(0, 0, 0, 0.39);
+                backdrop-filter: saturate(280%) blur(5vw);
+                padding: 5rem;
+            }
+        
+            header {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                height: 48px;
+                padding: 0 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 100;
+                background: rgba(0, 0, 0, 0.39);
+                backdrop-filter: saturate(280%) blur(5vw);
+            }
+        
+            .logo {
+                font-size: 25px;
+                cursor: pointer;
+            }
+        
+            nav {
+                display: flex;
+                align-items: center;
+            }
+        
+            nav a {
+                display: inline-block;
+                color: #fff;
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 12px;
+                margin-left: 35px;
+                border-bottom: 2px solid transparent;
+                transition: border-bottom 0.3s ease;
+            }
+        
+            nav a:hover {
+                border-bottom: 1px solid #2997ff;
+            }
+        
+            nav a:active {
+                transform: translateY(2px);
+            }
+        
+            header .btn-secundary {
+                margin-left: 1rem;
+                padding: 5px 15px;
+            }
+
+        </style>
+
     <header>
-        <a href="#" class="logo"><img src="./logo-d-removebg-preview.svg" width="35px" alt=""></a>
-        <nav class="navbar">
+        <a href="#" class="logo"><img src="./logo.svg" width="35px" alt=""></a>
+        <nav>
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+            <a href="#contact">contact</a>
             <button href="#" class="btn-secundary">Resume</button>
         </nav>
     </header>
@@ -178,7 +153,7 @@
                 width: 40px;
                 height: 40px;
                 background: transparent;
-                border: 2px solid #2997ff;
+                border: 1px solid #2997ff;
                 border-radius: 50%;
                 font-size: 20px;
                 color: #2997ff;
@@ -199,7 +174,6 @@
 
             .home-sci a:active {
                 transform: scale(0.9);
-                /* Cambiamos la escala al estar presionado */
             }
 
             .btn-secundary,
@@ -214,9 +188,7 @@
             }
 
             .btn-secundary {
-                /* border: solid 2px #2997ff; */
-                
-                border: 2px solid #2997ff;
+                border: 1px solid #2997ff;
                 background: #191920;
                 color: white;
             }
@@ -224,19 +196,18 @@
             .btn-primary {
                 border: solid 1px #2997ff;
                 background: #2997ff;
-                color: white;
+                color: black;
             }
 
             .btn-secundary:hover,
             .btn-primary:hover {
                 background: #2997ff;
-                color: #081b29;
+                color: white;
             }
 
             .btn-secundary:active,
             .btn-primary:active {
                 transform: scale(0.9);
-                /* Cambiamos la escala al estar presionado */
             }
 
             .home {
@@ -314,7 +285,7 @@
                 <button href="#" class="btn-secundary">About me</button>
             </div>
             <div class="image-container">
-                <img src="imgbb.jpg" alt="imagen" width="320px" height="320px">
+                <img src="img.jpg" alt="imagen" width="320px" height="320px">
             </div>
         </section>
 
@@ -396,7 +367,7 @@
         <section class="about" id="about">
             <div class="about-image">
                 <div class="image">
-                    <img alt="profile" src="imgnn.jpg" />
+                    <img alt="profile" src="img.jpg" />
                 </div>
             </div>
             <div class="about-text">
@@ -455,7 +426,7 @@
                 gap: 0.8rem;
                 backdrop-filter: saturate(280%) blur(5vw);
                 background: #191920;
-                /* border: solid #2997ff; */
+                border: 1px solid #2997ff;
             }
 
             .education h2 {
@@ -514,65 +485,6 @@
 
 
         <style>
-            .flex-wrapper {
-                display: flex;
-            }
-
-            .single-chart {
-                width: 250px;
-                justify-content: space-around;
-            }
-
-            .circular-chart {
-                display: block;
-                margin: 10px auto;
-                max-width: 80%;
-                max-height: 250px;
-            }
-
-
-            .circle-bg,
-            .circle {
-                fill: none;
-                stroke: #cbcbcb87;
-                backdrop-filter: saturate(280%) blur(5vw);
-                background: none;
-                stroke-width: 0.5;
-            }
-
-            .circle {
-                fill: #191920;
-                stroke-linecap: round;
-                animation: progress 1s ease-out forwards;
-            }
-
-            @keyframes progress {
-                0% {
-                    stroke-dasharray: 0 100;
-                }
-            }
-
-            .orange .circle {
-                stroke: #2997ff;
-            }
-
-            .percentage {
-                fill: #666;
-                font-family: sans-serif;
-                font-size: 0.5em;
-                text-anchor: middle;
-            }
-        </style>
-
-
-
-
-
-
-
-
-
-        <style>
             .sss {
                 display: flex;
                 align-items: center;
@@ -611,18 +523,59 @@
                 font-size: 20px;
                 color: rgb(255, 255, 255);
             }
+
+
+
+            .flex-wrapper {
+                display: flex;
+            }
+
+            .single-chart {
+                width: 250px;
+                justify-content: space-around;
+            }
+
+            .circular-chart {
+                display: block;
+                margin: 10px auto;
+                max-width: 80%;
+                max-height: 250px;
+            }
+
+
+            .circle-bg,
+            .circle {
+                fill: none;
+                stroke: #cbcbcb87;
+                backdrop-filter: saturate(280%) blur(5vw);
+                background: none;
+                stroke-width: 0.6;
+            }
+
+            .circle {
+                fill: #191920;
+                stroke-linecap: round;
+                animation: progress 1s ease-out forwards;
+            }
+
+            @keyframes progress {
+                0% {
+                    stroke-dasharray: 0 100;
+                }
+            }
+
+            .orange .circle {
+                stroke: #2997ff;
+                stroke-width: 0.5;
+            }
+
+            .percentage {
+                fill: #666;
+                font-family: sans-serif;
+                font-size: 0.5em;
+                text-anchor: middle;
+            }
         </style>
-
-
-
-
-
-
-
-
-
-
-
 
 
         <section class="sss">
@@ -671,7 +624,7 @@
 
                     div.innerHTML = `<svg viewBox="0 0 36 36" class="circular-chart orange">
       <path class="circle-bg" d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.831a15.9155 15.9155 0 0 1 0 -31.831"/>
-      <path class="circle" stroke-width="2" stroke-dasharray="${item.percentage}, 100" d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.831a15.9155 15.9155 0 0 1 0 -31.831"/>
+      <path class="circle" stroke-dasharray="${item.percentage}, 100" d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.831a15.9155 15.9155 0 0 1 0 -31.831"/>
       <text x="18" y="30" class="percentage">${item.percentage}%</text>
 
       <!-- Agregamos la imagen y el nombre -->
@@ -737,7 +690,7 @@
 
 
         <style>
-            .Contact-form {
+            .contact-form {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -799,166 +752,158 @@
         <section class="education">
             <h2><span>My</span> projects</h2>
             <style>
-                .containerr {
+                :root {
+                    --main-color: rgba(181, 181, 181, 0.511);
+                    --active-bullet-color: rgb(19, 201, 19);
+                }
+
+                .carousel-container {
+                    position: relative;
+                    max-width: 1100px;
+                }
+
+                .carousel-item {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    justify-content: space-between;
                     max-width: 1100px;
                     background: #191920;
                     backdrop-filter: saturate(280%) blur(5vw);
                     border-radius: 10px;
-                    padding: 1rem;
-                    gap: 1rem;
-                }
-
-                img {
-                    max-width: 100%;
-                    border-radius: 10px;
-                    height: 40%;
-                }
-
-                p {
-                    text-align: justify;
-                    font-size: 0.7rem;
-                }
-
-                .social-buttons {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-around;
-                    width: 100%;
-                }
-
-                .text-white {
+                    padding: 1.2rem;
                     color: white;
+                    border: 1px solid #2997ff;
                 }
 
-                input[type="radio"] {
-                    width: 20px;
-                    height: 20px;
-                    padding: 0;
-                    position: relative;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    appearance: none;
-                    border-radius: 50%;
-                    outline: none;
-                    cursor: pointer;
-                    background-color: #fff;
-                }
-
-                input[type="radio"]::before {
-                    content: '';
-                    width: 20px;
-                    height: 20px;
+                .carousel-controls,
+                .carousel-indicators {
                     position: absolute;
+                    width: 100%;
+                    z-index: 2;
+                    /* opacity: 0; */
+                    transition: opacity 0.7s ease;
+                }
+
+                .carousel-controls {
                     top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%) scale(1);
-                    background-color: #d70a6d;
+                    transform: translateY(-50%);
+                    display: flex;
+                    padding: 0 0.4rem;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                .carousel-control {
+                    font-size: 2em;
+                    cursor: pointer;
+                    background-color: rgba(255, 255, 255, 0.180);
+                    border: none;
                     border-radius: 50%;
-                    opacity: 0;
-                    box-shadow: none;
-                }
-
-                input[type="radio"]:checked::before {
-                    opacity: 1;
-                }
-
-
-                input[type="radio"]:checked:focus {
-                    border: 4px solid #2997ff;
-                }
-
-                input[type="radio"]:checked {
-                    width: 28px;
-                    height: 28px;
-                    border: 2px solid #2997ff;
-                }
-
-                .ssss {
+                    width: 30px;
+                    height: 30px;
+                    color: white;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    flex-direction: row;
-                    gap: 1rem;
                 }
 
-                .ssss input[type="radio"]:hover::before {
-                    opacity: 0.8;
-                }
-
-                .ssss input[type="radio"]:active::before {
-                    opacity: 0.6;
-                }
-
-                .ssss input[type="radio"]:hover:checked::before {
+                .carousel-container:hover .carousel-controls,
+                .carousel-container:hover .carousel-indicators {
                     opacity: 1;
                 }
 
-                .ssss input[type="radio"]:active:checked::before {
-                    opacity: 0.8;
+                .carousel-indicators {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    position: absolute;
+                    bottom: 2%;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    z-index: 10;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
 
-                .ssss input[type="radio"]:hover:checked:focus {
-                    border: 4px solid #081b29;
-                    /* Cambia el color de borde al hacer hover y estar seleccionado */
+                .carousel-caption {
+                    width: 70%;
                 }
 
-                .ssss input[type="radio"]:active:checked {
-                    width: 28px;
-                    height: 28px;
-                    border: 2px solid #081b29;
-                    /* Cambia el color del borde al hacer clic y estar seleccionado */
+                .carousel-caption h5 {
+                    text-align: center;
                 }
 
-                .containerr {
+                .carousel-caption p {
+                    text-align: justify;
+                }
+
+                .technologies {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                }
+
+                .links {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                .carousel-container img {
+                    max-width: 100%;
+                    border-radius: 10px;
+                }
+
+                .icon-technology {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .carousel-bullet {
+                    color: white;
+                    cursor: pointer;
+                    font-size: 35px;
+                    margin: 0 5px;
+                }
+
+                .active-bullet {
+                    color: #2997ff;
+                }
+
+                .carousel-container label {
                     position: relative;
-                }
-
-                .hidden {
-                    display: none;
                 }
             </style>
 
-
-            <div class="containerr">
-                <img id="main-image" src="captura.PNG" alt="">
-                <h3 id="main-title">Encriptador</h3>
-                <p id="main-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, nesciunt
-                    praesentium ducimus in nostrum consequuntur aspernatur deserunt alias atque qui? Voluptatum fugiat
-                    minima
-                    enim iste tenetur voluptates, officiis temporibus qui!</p>
-                <div class="technologies">
-                    <i class="bi bi-filetype-js"></i>
-                </div>
-                <div class="social-buttons">
-                    <a href="#" id="website-link"><i class="text-white bi bi-globe"></i></a>
-                    <a href="#" id="repository-link"><i class="text-white bi bi-github"></i></a>
+            <div class="carousel-container">
+                <div class="carousel-inner">
+                    <div class="carousel-controls">
+                        <div class="carousel-control" onclick="prevSlide()">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="10" viewBox="0 0 320 512"
+                                fill="white">
+                                <path
+                                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+                            </svg>
+                        </div>
+                        <div class="carousel-control" onclick="nextSlide()">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="10" viewBox="0 0 320 512"
+                                fill="white">
+                                <path
+                                    d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="ssss" style="margin: 1rem;">
-                <input type="radio" name="option" id="option1" checked>
-                <input type="radio" name="option" id="option2">
-                <input type="radio" name="option" id="option3">
-                <input type="radio" name="option" id="option4">
-            </div>
-
 
             <script>
-                const radioButtons = document.querySelectorAll('input[type="radio"]');
-                const mainImage = document.getElementById('main-image');
-                const mainTitle = document.getElementById('main-title');
-                const mainDescription = document.getElementById('main-description');
-                const websiteLink = document.getElementById('website-link');
-                const repositoryLink = document.getElementById('repository-link');
-                const technologiesContainer = document.querySelector('.technologies');
-
-                const projects = [
+                var projects = [
                     {
-                        imageSrc: 'captura.PNG',
+                        imageSrc: 'http://fakeimg.pl/2000x800/DA5930/fff/?text=JavaScript',
                         title: 'Encriptador',
                         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, nesciunt praesentium ducimus in nostrum consequuntur aspernatur deserunt alias atque qui? Voluptatum fugiat minima enim iste tenetur voluptates, officiis temporibus qui!',
                         website: 'https://example.com/proyecto-encriptador',
@@ -966,178 +911,182 @@
                         technologies: ['bi-filetype-html', 'bi-filetype-html', 'bi-filetype-html']
                     },
                     {
-                        imageSrc: 'entomo.PNG',
+                        imageSrc: 'http://fakeimg.pl/2000x800/F90/fff/?text=Carousel',
                         title: 'Entomo',
                         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, nesciunt praesentium ducimus in nostrum consequuntur aspernatur deserunt alias atque qui? Voluptatum fugiat minima enim iste tenetur voluptates, officiis temporibus qui!',
                         website: 'https://example.com/proyecto-entomo',
                         repository: 'https://github.com/tu-usuario/proyecto-entomo',
                         technologies: ['bi-filetype-js', 'bi-filetype-html']
-                    },
-                    // Agrega más objetos de proyecto según el número de proyectos "n"
+                    }
                 ];
 
-                radioButtons.forEach((radioButton, index) => {
-                    radioButton.addEventListener('change', function () {
-                        const project = projects[index];
+                function createCarousel(projects) {
+                    let carouselItems = '';
+                    let carouselIndicators = '';
 
-                        mainImage.src = project.imageSrc;
-                        mainTitle.textContent = project.title;
-                        mainDescription.textContent = project.description;
-                        websiteLink.href = project.website;
-                        repositoryLink.href = project.repository;
+                    for (let i = 0; i < projects.length; i++) {
+                        carouselItems += `
+      <div class="carousel-item">
+        <img src="${projects[i].imageSrc}" alt="${projects[i].title}">
+        <div class="carousel-caption">
+          <h5>${projects[i].title}</h5>
+          <p>${projects[i].description}</p>
+          <div class="technologies">
+            <img src="https://cdn-icons-png.flaticon.com/512/11518/11518876.png" class="icon-technology" alt="">
+          </div>
+          <div class="links">
+            <a href="${projects[i].website}"><img
+                src="https://cdn-icons-png.flaticon.com/512/7719/7719009.png" alt="" class="icon-technology"></a>
+            <a href="${projects[i].repository}"><img
+                src="https://cdn-icons-png.flaticon.com/512/11518/11518876.png" class="icon-technology" alt=""></a>
+          </div>
+        </div>
+      </div>`;
 
-                        technologiesContainer.innerHTML = '';
+                        carouselIndicators += `<li><label onclick="buscar(${i})" class="carousel-bullet">•</label></li>`;
+                    }
 
-                        const fragment = document.createDocumentFragment();
+                    let carouselInner = document.querySelector('.carousel-inner');
+                    carouselInner.innerHTML += `${carouselItems}<ol class="carousel-indicators">${carouselIndicators}</ol>`;
 
-                        project.technologies.forEach(technology => {
-                            const iconElement = document.createElement('i');
-                            iconElement.className = `text-white bi ${technology}`;
-                            fragment.appendChild(iconElement);
-                        });
+                    showSlides();
+                }
 
-                        technologiesContainer.appendChild(fragment);
+                var currentIndex = 0;
+                var totalSlides = projects.length;
+
+                function showSlides() {
+                    const slides = document.querySelectorAll('.carousel-item');
+                    const labels = document.querySelectorAll('label');
+
+                    slides.forEach((slide, index) => {
+                        slide.style.display = index === currentIndex ? 'flex' : 'none';
                     });
-                });
 
+                    labels.forEach((label, index) => {
+                        label.classList.toggle('active-bullet', index === currentIndex);
+                    });
+                }
 
+                function prevSlide() {
+                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                    showSlides();
+                }
+
+                function nextSlide() {
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    showSlides();
+                }
+
+                function buscar(index) {
+                    currentIndex = index;
+                    console.log("asdasd");
+                    showSlides();
+                }
+
+                createCarousel(projects);
             </script>
+
         </section>
 
 
         <style>
-            input {
-                background: #191920;
-                backdrop-filter: saturate(280%) blur(5vw);
-                border: none;
-                font-size: 14px;
-                line-height: 1.23536;
-                font-weight: 400;
-                letter-spacing: -.022em;
-                border-radius: 12px;
-                text-align: left;
-                outline: none;
-                color: white;
-            }
-
+            input,
             textarea {
+                background: #191920;
                 backdrop-filter: saturate(280%) blur(5vw);
-                border: none;
-                font-size: 17px;
-                line-height: 1.23536;
-                font-weight: 400;
-                letter-spacing: -.022em;
+                font: 400 1rem/1.5 Arial, sans-serif;
                 border-radius: 12px;
                 text-align: left;
                 outline: none;
                 color: white;
-                background: #191920;
-                backdrop-filter: saturate(280%) blur(5vw);
-                padding: 1rem 0.3rem 0.3rem 0.5rem;
+                padding: 1rem 0.5rem 0.3rem;
+                border: 0.5px solid #2997ff;
             }
 
-            .Contact {
+            .contact-section {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
             }
 
-            .Contact h2 {
+            .contact-header {
                 font-size: 60px;
-            }
-
-            .Contact h2 span {
                 color: #2997ff;
             }
 
-            .Contact-container {
+            .contact-container {
                 width: 100%;
                 gap: 0.5rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                flex-direction: row;
                 flex-wrap: wrap;
-                
+            }
+
+            .input-container {
+                position: relative;
+                width: 100%;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                height: 100%;
+            }
+
+            textarea:focus,
+            input:focus {
+                border: 2px solid #2997ff;
+            }
+
+            input:not(:placeholder-shown)+label,
+            input:focus+label,
+            textarea:not(:placeholder-shown)+label,
+            textarea:focus+label {
+                transform: scale(0.7) translateY(-0.6rem);
+                color: #2997ff;
+            }
+
+            .contact-label {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 100%;
+                height: 100%;
+                font-size: 17px;
+                color: gray;
+                transition: 0.25s ease-in-out;
+                transform-origin: top left;
+                pointer-events: none;
             }
         </style>
 
-        <section class="Contact">
-
-            <h2><span>Contact</span></h2>
-
-
-            <form action="" class="Contact-form">
-
-                <style>
-                    .Contact-input-label {
-                        position: relative;
-                        width: 100%;
-                    }
-
-                    input {
-                        width: 100%;
-                        height: 100%;
-                        padding: 1rem 0.3rem 0.3rem 0.5rem;
-                    }
-
-
-                    input:not(:placeholder-shown)+label,
-                    input:focus+label {
-                        transform: scale(0.7) translateY(-0.6rem);
-                    }
-
-                    textarea:not(:placeholder-shown)+label,
-                    textarea:focus+label {
-                        transform: scale(0.7) translateY(-0.6rem);
-                    }
-
-                    label {
-                        position: absolute;
-                        top: 10px;
-                        left: 10PX;
-                        width: 100%;
-                        height: 100%;
-                        font-size: 17px;
-                        color: #b7b7b7;
-                        transition: 0.25s ease-in-out;
-                        transform-origin: top left;
-                        pointer-events: none;
-                    }
-
-                    textarea:focus,
-                    input:focus {
-                        outline: 1.5px solid #2997ff;
-                    }
-                </style>
-
-                <div class="Contact-container">
-                    <div class="Contact-input-label">
+        <section class="contact-section">
+            <h2 class="contact-header"><span>Contact</span></h2>
+            <form action="" class="contact-form">
+                <div class="contact-container">
+                    <div class="input-container">
                         <input type="text" name="" id="fullname" required placeholder=" ">
-                        <label for="fullname">Fullname</label>
+                        <label class="contact-label" for="fullname">Fullname</label>
                     </div>
-
-                    <div class="Contact-input-label">
+                    <div class="input-container">
                         <input type="text" name="" id="email" required placeholder=" ">
-                        <label for="email">Email</label>
+                        <label class="contact-label" for="email">Email</label>
                     </div>
                 </div>
-
-                <div class="Contact-input-label">
+                <div class="input-container">
                     <input type="text" name="" id="" placeholder=" " placeholder=" ">
-                    <label for="">Subjet</label>
+                    <label class="contact-label" for="">Subjet</label>
                 </div>
-                <div class="Contact-input-label">
+                <div class="input-container">
                     <textarea name="" id="" cols="30" rows="10" placeholder=" " style="width: 100%;"></textarea>
-                    <label for="">Message</label>
+                    <label class="contact-label" for="">Message</label>
                 </div>
                 <button href="#" class="btn-primary">Send</button>
-
             </form>
-
         </section>
-
     </main>
 </body>
 
