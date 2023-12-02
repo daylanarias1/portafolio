@@ -10,186 +10,195 @@
 
 <body>
 
-        <style>
-            @font-face {
-                font-family: 'Inter';
-                src: url('Inter Variable/Inter.ttf') format('truetype');
-            }
-        
-            * {
-                padding: 0;
-                margin: 0;
-                font-family: 'Inter', sans-serif;
-                box-sizing: border-box;
-            }
-        
-            body {
-                background: url("background.png") no-repeat fixed;
-                background-size: cover;
-                width: 100%;
-                height: 100%;
-                color: #fff;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                backdrop-filter: saturate(280%) blur(1.5vw);
-                position: relative;
-            }
-        
-            main {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 3rem;
-                margin: 4rem 0;
-            }
-        
-            section {
-                border-radius: 30px;
-                width: 95%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: rgba(0, 0, 0, 0.39);
-                backdrop-filter: saturate(280%) blur(5vw);
-                padding: 5rem;
-            }
-        
-            header {
-                position: fixed;
-                top: 0;
-                width: 100%;
-                height: 48px;
-                padding: 0 2rem;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                z-index: 100;
-                background: rgba(0, 0, 0, 0.39);
-                backdrop-filter: saturate(280%) blur(5vw);
-            }
-        
-            .logo {
-                font-size: 25px;
-                cursor: pointer;
-            }
-        
-            nav {
-                display: flex;
-                align-items: center;
-            }
-        
-            nav a {
-                display: inline-block;
-                color: #fff;
-                text-decoration: none;
-                font-weight: 400;
-                font-size: 12px;
-                margin-left: 35px;
-                border-bottom: 2px solid transparent;
-                transition: border-bottom 0.3s ease;
-            }
-        
-            nav a:hover {
-                border-bottom: 1px solid #2997ff;
-            }
-        
-            nav a:active {
-                transform: translateY(2px);
-            }
-        
-            header .btn-secundary {
-                margin-left: 1rem;
-                padding: 5px 15px;
-            }
-
-            a{
-                cursor: pointer;
-            }
-
-        </style>
-
-
-
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
-
-    #loader-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: black;
-        opacity: 0.8;
-        z-index: 999;
-    }
-
-    .loader {
-        border: 16px solid #f3f3f3;
-        border-top: 16px solid #3498db;
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
-        animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('Inter Variable/Inter.ttf') format('truetype');
         }
 
-        100% {
-            transform: rotate(360deg);
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            box-sizing: border-box;
         }
-    }
-</style>
 
-<div id="loader-container">
-    <div class="loader"></div>
-</div>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Ocultar el loader cuando el contenido está completamente cargado
-        document.getElementById("loader-container").style.display = "none";
-    });
-
-    // Mostrar el loader cuando se inicia la carga de la página
-    document.onreadystatechange = function () {
-        if (document.readyState === "loading") {
-            document.getElementById("loader-container").style.display = "flex";
+        body {
+            background: url("background.png") no-repeat fixed;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: saturate(280%) blur(1.5vw);
+            position: relative;
         }
-    };
 
-    // Ocultar el loader cuando todas las imágenes están cargadas
-    document.addEventListener("readystatechange", function () {
-        if (document.readyState === "complete") {
+        main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+
+        section {
+            border-radius: 30px;
+            width: 95%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.39);
+            backdrop-filter: saturate(280%) blur(5vw);
+            padding: 5rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 48px;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.39);
+            backdrop-filter: saturate(280%) blur(5vw);
+        }
+
+        .logo {
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 12px;
+            margin-left: 35px;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease;
+        }
+
+        nav a:hover {
+            border-bottom: 1px solid #2997ff;
+        }
+
+        nav a:active {
+            transform: translateY(2px);
+        }
+
+        header .btn-secundary {
+            margin-left: 1rem;
+            padding: 5px 15px;
+        }
+
+        a {
+            cursor: pointer;
+        }
+    </style>
+
+
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #loader-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            z-index: 999;
+        }
+
+        .loader {
+            width: 80px;
+            height: 80px;
+            animation: spin 1s linear infinite;
+            position: relative;
+        }
+
+        .loader img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 35px;
+            height: 35px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <div id="loader-container">
+        <div class="loader">
+            <img src="./logo.svg" alt="">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("loader-container").style.display = "none";
-        }
-    });
-</script>
+            document.body.style.overflow = "auto";
+        });
 
-<header>
-    <a href="#" class="logo"><img src="./logo.svg" width="35px" alt=""></a>
-    <nav>
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-        <button href="#" class="btn-secundary">Resume</button>
-    </nav>
-</header>
+        // Mostrar el loader cuando se inicia la carga de la página
+        document.onreadystatechange = function () {
+            if (document.readyState === "loading") {
+                document.getElementById("loader-container").style.display = "flex";
+                document.body.style.overflow = "hidden"; // Deshabilitar el scroll mientras carga
+            }
+        };
+
+        // Ocultar el loader cuando todas las imágenes están cargadas
+        document.addEventListener("readystatechange", function () {
+            if (document.readyState === "complete") {
+                document.getElementById("loader-container").style.display = "none";
+                document.body.style.overflow = "auto"; // Habilitar el scroll después de cargar
+            }
+        });
+    </script>
+
+    <header>
+        <a href="#" class="logo"><img src="./logo.svg" width="35px" alt=""></a>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <button href="#" class="btn-secundary">Resume</button>
+        </nav>
+    </header>
 
     <main>
         <style>
@@ -324,9 +333,10 @@
                 height: 200px;
                 /* filter: grayscale(50%); */
             }
-                        .home-image {
-                 width: 200px;
-                  height: 200px;
+
+            .home-image {
+                width: 200px;
+                height: 200px;
                 border-radius: 50%;
                 overflow: hidden;
             }
@@ -651,13 +661,13 @@
                 text-anchor: middle;
             }
 
-            
+
             .single-chart h6 {
                 color: #2997ff;
                 font-size: 12px;
             }
 
-            .technologiess{
+            .technologiess {
                 position: absolute;
                 display: flex;
                 justify-content: center;
@@ -670,7 +680,6 @@
                 color: white;
                 font-size: 18px;
             }
-
         </style>
 
 
@@ -844,7 +853,6 @@
             .education h2 span {
                 color: #2997ff;
             }
-
         </style>
 
 
@@ -912,21 +920,21 @@
                 }
 
                 .carousel-indicators {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    bottom: 2%;
-    left: 50%;
-    right: 0;
-    text-align: center;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    transform: translateX(-50%);
-}
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    position: absolute;
+                    bottom: 2%;
+                    left: 50%;
+                    right: 0;
+                    text-align: center;
+                    z-index: 10;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100px;
+                    transform: translateX(-50%);
+                }
 
 
                 .carousel-caption {
@@ -980,11 +988,10 @@
                     position: relative;
                 }
 
-                  .carousel-caption h5 {
-                color: #2997ff;
-                margin: 1rem;
-            }
-
+                .carousel-caption h5 {
+                    color: #2997ff;
+                    margin: 1rem;
+                }
             </style>
 
             <div class="carousel-container">
