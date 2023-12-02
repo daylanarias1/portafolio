@@ -106,6 +106,10 @@
                 padding: 5px 15px;
             }
 
+            a{
+                cursor: pointer;
+            }
+
         </style>
 
     <header>
@@ -236,12 +240,6 @@
                 text-align: left;
             }
 
-            .image-container {
-                min-width: 10px;
-                border-radius: 50%;
-                overflow: hidden;
-            }
-
             @media (min-width: 700px) {
                 main section:first-of-type {
                     height: 90vh;
@@ -255,10 +253,16 @@
                 letter-spacing: -.003em;
             }
 
-            .image-container img {
-                width: 250px;
-                height: 230px;
-                filter: grayscale(50%);
+            .home-image img {
+                width: 220px;
+                height: 200px;
+                /* filter: grayscale(50%); */
+            }
+                        .home-image {
+                 width: 200px;
+                  height: 200px;
+                border-radius: 50%;
+                overflow: hidden;
             }
         </style>
 
@@ -284,8 +288,8 @@
                 <button href="#" class="btn-primary">Resume</button>
                 <button href="#" class="btn-secundary">About me</button>
             </div>
-            <div class="image-container">
-                <img src="img.jpg" alt="imagen" width="320px" height="320px">
+            <div class="home-image">
+                <img src="foto.png" alt="imagen">
             </div>
         </section>
 
@@ -367,7 +371,7 @@
         <section class="about" id="about">
             <div class="about-image">
                 <div class="image">
-                    <img alt="profile" src="img.jpg" />
+                    <img src="foto.png" alt="imagen">
                 </div>
             </div>
             <div class="about-text">
@@ -449,7 +453,7 @@
 
                 <div class="cards-education">
                     <div class="card-education">
-                        <img class="logo-one" src="logo-one.png" alt="Logo - ONE" width="50%" height="20%">
+                        <img class="logo-one" src="logo-one.svg" alt="Logo - ONE" width="50%" height="20%">
                         <p>Desarrolo web</p>
                         <h6>2023 - En curso</h6>
                     </div>
@@ -457,7 +461,7 @@
 
                 <div class="cards-education">
                     <div class="card-education">
-                        <img class="logo-one" src="logo-ucr.png" alt="Logo - ONE" width="50%" height="30%">
+                        <img class="logo-one" src="logo-ucr.svg" alt="Logo - ONE" width="50%" height="30%">
                         <p>Informatica empresarial</p>
                         <h6>2021 - En curso</h6>
                     </div>
@@ -465,7 +469,7 @@
 
                 <div class="cards-education">
                     <div class="card-education">
-                        <img class="logo-one" src="itoo.png" alt="Logo - ONE" width="50%" height="30%">
+                        <img class="logo-one" src="logo-itoo.svg" alt="Logo - ONE" width="50%" height="30%">
                         <p>FullStack</p>
                         <h6>2021 - En curso</h6>
                     </div>
@@ -532,7 +536,9 @@
 
             .single-chart {
                 width: 250px;
-                justify-content: space-around;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             .circular-chart {
@@ -540,6 +546,9 @@
                 margin: 10px auto;
                 max-width: 80%;
                 max-height: 250px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
 
 
@@ -575,6 +584,27 @@
                 font-size: 0.5em;
                 text-anchor: middle;
             }
+
+            
+            .single-chart h6 {
+                color: #2997ff;
+                font-size: 12px;
+            }
+
+            .technologiess{
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+
+            .technologiess h3 {
+                color: white;
+                font-size: 18px;
+            }
+
         </style>
 
 
@@ -591,25 +621,27 @@
 
         <script>
             const webData = [
-                { name: "React", percentage: 56, image: "react.png" },
-                { name: "PHP", percentage: 23, image: "php.png" },
-                { name: "HTML", percentage: 99, image: "html.png" },
-                { name: "CSS", percentage: 66, image: "css.png" },
-                { name: "JS", percentage: 44, image: "js.png" }
+                { name: "React", percentage: 56, image: "	https://cdn-icons-png.flaticon.com/512/11023/11023348.png" },
+                { name: "PHP", percentage: 23, image: "	https://cdn-icons-png.flaticon.com/512/5968/5968332.png" },
+                { name: "HTML", percentage: 99, image: "	https://cdn-icons-png.flaticon.com/512/174/174854.png" },
+                { name: "CSS", percentage: 66, image: "https://cdn-icons-png.flaticon.com/512/732/732190.png" },
+                { name: "JS", percentage: 44, image: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png" },
+                { name: "Blazor", percentage: 44, image: "logo-blazor.svg" },
+                { name: "Angular", percentage: 44, image: "image55391.png" }
             ];
 
             const programmingData = [
-                { name: "Java", percentage: 77, image: "java.webp" },
-                { name: "C#", percentage: 66, image: "cshart.png" },
-                { name: "C++", percentage: 55, image: "cpp.png" },
-                { name: "Python", percentage: 44, image: "python.png" }
+                { name: "Java", percentage: 77, image: "https://cdn-icons-png.flaticon.com/512/226/226777.png" },
+                { name: "C#", percentage: 66, image: "https://cdn-icons-png.flaticon.com/512/6132/6132221.png" },
+                { name: "C++", percentage: 55, image: "https://cdn-icons-png.flaticon.com/512/6132/6132222.png" },
+                { name: "Python", percentage: 44, image: "https://cdn-icons-png.flaticon.com/128/5968/5968350.png" }
             ];
 
             const toolsData = [
-                { name: "Git", percentage: 95, image: "git.png" },
-                { name: "Git Desktop", percentage: 95, image: "git-destop.png" },
-                { name: "ChatGPT", percentage: 55, image: "chat-gpt.jpg" },
-                { name: "Docker", percentage: 22, image: "docker.png" },
+                { name: "Git", percentage: 95, image: "https://cdn-icons-png.flaticon.com/512/11518/11518876.png" },
+                { name: "Git Desktop", percentage: 95, image: "	https://cdn-icons-png.flaticon.com/512/733/733553.png" },
+                { name: "ChatGPT", percentage: 55, image: "logo-gpt.png" },
+                { name: "Docker", percentage: 22, image: "https://cdn-icons-png.flaticon.com/512/919/919853.png" },
                 { name: "Kubernetes", percentage: 11, image: "kubernetes.png" }
             ];
 
@@ -625,12 +657,17 @@
                     div.innerHTML = `<svg viewBox="0 0 36 36" class="circular-chart orange">
       <path class="circle-bg" d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.831a15.9155 15.9155 0 0 1 0 -31.831"/>
       <path class="circle" stroke-dasharray="${item.percentage}, 100" d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.831a15.9155 15.9155 0 0 1 0 -31.831"/>
-      <text x="18" y="30" class="percentage">${item.percentage}%</text>
 
-      <!-- Agregamos la imagen y el nombre -->
-      <image href="${item.image}" x="10" y="5" width="16" height="16" />
-      <text x="18" y="23" class="percentage">${item.name}</text>
-    </svg>`;
+    </svg>
+    
+    <div class="technologiess">
+            <img src="${item.image}" width="70" height="60" />
+            <h3 class="name">${item.name}</h3>
+    <h6 class="percentage">${item.percentage}%</h6>
+
+    </div>
+
+    `;
 
                     SkillsContainer.appendChild(div);
                 });
@@ -717,6 +754,7 @@
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
+                gap: 1rem;
             }
 
             .educations {
@@ -743,9 +781,6 @@
                 color: #2997ff;
             }
 
-            .education h6 {
-                color: #2997ff;
-            }
         </style>
 
 
@@ -780,7 +815,7 @@
                     position: absolute;
                     width: 100%;
                     z-index: 2;
-                    /* opacity: 0; */
+                    opacity: 0;
                     transition: opacity 0.7s ease;
                 }
 
@@ -813,19 +848,22 @@
                 }
 
                 .carousel-indicators {
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-                    position: absolute;
-                    bottom: 2%;
-                    left: 0;
-                    right: 0;
-                    text-align: center;
-                    z-index: 10;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    transform: translateX(-50%);
+}
+
 
                 .carousel-caption {
                     width: 70%;
@@ -877,6 +915,12 @@
                 .carousel-container label {
                     position: relative;
                 }
+
+                  .carousel-caption h5 {
+                color: #2997ff;
+                margin: 1rem;
+            }
+
             </style>
 
             <div class="carousel-container">
@@ -903,7 +947,7 @@
             <script>
                 var projects = [
                     {
-                        imageSrc: 'http://fakeimg.pl/2000x800/DA5930/fff/?text=JavaScript',
+                        imageSrc: 'encripdatador.png',
                         title: 'Encriptador',
                         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, nesciunt praesentium ducimus in nostrum consequuntur aspernatur deserunt alias atque qui? Voluptatum fugiat minima enim iste tenetur voluptates, officiis temporibus qui!',
                         website: 'https://example.com/proyecto-encriptador',
@@ -935,10 +979,12 @@
             <img src="https://cdn-icons-png.flaticon.com/512/11518/11518876.png" class="icon-technology" alt="">
           </div>
           <div class="links">
-            <a href="${projects[i].website}"><img
-                src="https://cdn-icons-png.flaticon.com/512/7719/7719009.png" alt="" class="icon-technology"></a>
-            <a href="${projects[i].repository}"><img
-                src="https://cdn-icons-png.flaticon.com/512/11518/11518876.png" class="icon-technology" alt=""></a>
+            <a href="${projects[i].website}"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="white" class="bi bi-globe2" viewBox="0 0 16 16">
+  <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332M8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+</svg></a>
+            <a href="${projects[i].repository}"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#CC4342" class="bi bi-git" viewBox="0 0 16 16">
+  <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.031 1.031 0 0 0 0-1.457"/>
+</svg></a>
           </div>
         </div>
       </div>`;
