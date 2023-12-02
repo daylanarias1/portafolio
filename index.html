@@ -112,18 +112,84 @@
 
         </style>
 
-    <header>
-        <a href="#" class="logo"><img src="./logo.svg" width="35px" alt=""></a>
-        <nav>
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">contact</a>
-            <button href="#" class="btn-secundary">Resume</button>
-        </nav>
-    </header>
 
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    #loader-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.8;
+        z-index: 999;
+    }
+
+    .loader {
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid #3498db;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+<div id="loader-container">
+    <div class="loader"></div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Ocultar el loader cuando el contenido está completamente cargado
+        document.getElementById("loader-container").style.display = "none";
+    });
+
+    // Mostrar el loader cuando se inicia la carga de la página
+    document.onreadystatechange = function () {
+        if (document.readyState === "loading") {
+            document.getElementById("loader-container").style.display = "flex";
+        }
+    };
+
+    // Ocultar el loader cuando todas las imágenes están cargadas
+    document.addEventListener("readystatechange", function () {
+        if (document.readyState === "complete") {
+            document.getElementById("loader-container").style.display = "none";
+        }
+    });
+</script>
+
+<header>
+    <a href="#" class="logo"><img src="./logo.svg" width="35px" alt=""></a>
+    <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <button href="#" class="btn-secundary">Resume</button>
+    </nav>
+</header>
 
     <main>
         <style>
