@@ -157,6 +157,10 @@
                 transform: rotate(360deg);
             }
         }
+
+         body.no-scroll {
+            overflow: hidden;
+        }
     </style>
 
     <div id="loader-container">
@@ -165,28 +169,22 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("loader-container").style.display = "none";
-            document.body.style.overflow = "auto";
-        });
-
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
         // Mostrar el loader cuando se inicia la carga de la página
-        document.onreadystatechange = function () {
-            if (document.readyState === "loading") {
-                document.getElementById("loader-container").style.display = "flex";
-                document.body.style.overflow = "hidden"; // Deshabilitar el scroll mientras carga
-            }
-        };
+        document.getElementById("loader-container").style.display = "flex";
+        document.body.classList.add("no-scroll"); // Deshabilitar el scroll mientras carga
+    });
 
-        // Ocultar el loader cuando todas las imágenes están cargadas
-        document.addEventListener("readystatechange", function () {
-            if (document.readyState === "complete") {
-                document.getElementById("loader-container").style.display = "none";
-                document.body.style.overflow = "auto"; // Habilitar el scroll después de cargar
-            }
-        });
-    </script>
+    // Ocultar el loader cuando todas las imágenes están cargadas
+    document.addEventListener("readystatechange", function () {
+        if (document.readyState === "complete") {
+            document.getElementById("loader-container").style.display = "none";
+            document.body.classList.remove("no-scroll"); // Habilitar el scroll después de cargar
+        }
+    });
+</script>
+
 
     <header>
         <a href="#" class="logo"><img src="./logo.svg" width="35px" alt=""></a>
