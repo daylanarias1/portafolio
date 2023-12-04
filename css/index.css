@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url("../assets/img/background.png") no-repeat fixed;
+  background: url("../assets/img/background3.png") no-repeat fixed;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -15,7 +15,6 @@ body {
   align-items: center;
   justify-content: center;
   backdrop-filter: saturate(280%) blur(1.5vw);
-  position: relative;
 }
 
 main {
@@ -64,7 +63,7 @@ nav {
   align-items: center;
 }
 
-nav a {
+a {
   display: inline-block;
   color: #fff;
   text-decoration: none;
@@ -723,7 +722,7 @@ textarea {
   border: 0.5px solid #2997ff;
 }
 
-.contact-section {
+.contact {
   display: flex;
   align-items: center;
   justify-content: center;
