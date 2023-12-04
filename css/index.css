@@ -14,7 +14,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  backdrop-filter: saturate(280%) blur(1.5vw);
 }
 
 main {
@@ -35,7 +34,7 @@ section {
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.39);
-  backdrop-filter: saturate(280%) blur(5vw);
+  backdrop-filter: saturate(280%) blur(2vw);
   padding: 5rem;
 }
 
