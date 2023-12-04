@@ -199,7 +199,7 @@ let btnAbrirPDF = document.getElementsByClassName('btnAbrirPDF');
 // Itera sobre la lista de elementos y agrega el evento a cada uno
 for (let i = 0; i < btnAbrirPDF.length; i++) {
     btnAbrirPDF[i].addEventListener('click', function () {
-        let rutaPDF = '/assets/pdf/Daylan Arias.pdf';
+        let rutaPDF = 'assets/pdf/Daylan Arias.pdf';
         window.open(rutaPDF, '_blank');
     });
 }
