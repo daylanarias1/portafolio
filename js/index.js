@@ -18,7 +18,7 @@ const webData = [
     { name: "HTML", percentage: 99, image: "	https://cdn-icons-png.flaticon.com/512/174/174854.png" },
     { name: "CSS", percentage: 66, image: "https://cdn-icons-png.flaticon.com/512/732/732190.png" },
     { name: "JS", percentage: 44, image: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png" },
-    { name: "Blazor", percentage: 44, image: "/assets/img/logo-blazor.svg" }
+    { name: "Blazor", percentage: 44, image: "assets/img/logo-blazor.svg" }
 ];
 
 const programmingData = [
@@ -31,7 +31,7 @@ const programmingData = [
 const toolsData = [
     { name: "Git", percentage: 95, image: "https://cdn-icons-png.flaticon.com/512/11518/11518876.png" },
     { name: "Git Desktop", percentage: 95, image: "	https://cdn-icons-png.flaticon.com/512/733/733553.png" },
-    { name: "ChatGPT", percentage: 55, image: "/assets/img/logo-gpt.png" },
+    { name: "ChatGPT", percentage: 55, image: "assets/img/logo-gpt.png" },
     { name: "Docker", percentage: 22, image: "https://cdn-icons-png.flaticon.com/512/919/919853.png" }
 ];
 
@@ -107,7 +107,7 @@ generateSkills(webData);
 
 var projects = [
     {
-        imageSrc: '/assets/img/encripdatador.png',
+        imageSrc: 'assets/img/encripdatador.png',
         title: 'Encriptador',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, nesciunt praesentium ducimus in nostrum consequuntur aspernatur deserunt alias atque qui? Voluptatum fugiat minima enim iste tenetur voluptates, officiis temporibus qui!',
         website: 'https://daylanarias1.github.io/Encriptador/',
@@ -115,7 +115,7 @@ var projects = [
         technologies: ['bi-filetype-html', 'bi-filetype-html', 'bi-filetype-html']
     },
     {
-        imageSrc: '/assets/img/entomologia.png',
+        imageSrc: 'assets/img/entomologia.png',
         title: 'Entomologia',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, nesciunt praesentium ducimus in nostrum consequuntur aspernatur deserunt alias atque qui? Voluptatum fugiat minima enim iste tenetur voluptates, officiis temporibus qui!',
         website: 'https://primierlab.000webhostapp.com/',
@@ -203,3 +203,4 @@ for (let i = 0; i < btnAbrirPDF.length; i++) {
         window.open(rutaPDF, '_blank');
     });
 }
+
